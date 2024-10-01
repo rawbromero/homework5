@@ -23,6 +23,7 @@ const username = faker.internet.userName({firstName: firstname, lastName:lastnam
 
 
 <!-- {{ fullname }} <br /> -->
+  
   <RouterLink :to="{ name: 'CardDetails', params: {id: username}}">
   
   <div class="border border-gray-400 rounded-lg shadow bg-gray-200 h-full">

@@ -6,8 +6,11 @@
     <RouterLink :to="{name: 'SettingsPage'}">Settings</RouterLink>
   </nav>
 </template>
+ 
 
-<!-- <style lang="postcss" scoped>
+
+
+ <!-- <style lang="postcss" scoped>
 nav {
   @apply flex justify-center space-x-4;
 
@@ -15,4 +18,4 @@ nav {
     @apply underline underline-offset-4;
   }
 }
-</style> -->
+</style>  -->
