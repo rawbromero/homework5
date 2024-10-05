@@ -10,7 +10,7 @@ const routes = [
   { path: '/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
   { path: '/employees/:id', name: 'CardDetails', component: CardDetails },
   { path: '/login', name: 'LoginPage', component: LoginPage},
-  { path: '/settings', name: 'SettingsPage', component: SettingsPage },
+  { path: '/settings', name: 'SettingsPage', component: SettingsPage, meta: { requiresAuth: true} },
      
 ]
 
@@ -18,5 +18,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 })
+//navigation guard
+router.beforeEach((to, _, next) => { 
+  if (to.meta.requiresAuth && !isAuthticated.value) {
+    next({ name: 'LoginPage', query: { redirect: to.fullPath } })
+  } else {
+    next()
+  }
 
+})
 export default router
