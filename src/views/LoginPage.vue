@@ -39,6 +39,7 @@ const logUserIn = async () => {
          router.push({name: 'SettingsPage'})
       }
    } else {
+      logout()
       
    }
 }
