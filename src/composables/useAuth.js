@@ -12,7 +12,7 @@ const { isAuthenticated, user } = firebaseAuth(auth)
 
 export const useAuth = () => {
     const login = async (username, password) => {
-        await signInwithEmailAndPassword(auth, username, password)
+        await signInWithEmailAndPassword(auth, username, password)
         return isAuthenticated.value
 
 
